@@ -4,10 +4,12 @@ variable "resource_group_name" {
   default     = "rg-devops-k8s-demo"
 }
 
+
+
 variable "location" {
   description = "Azure region"
   type        = string
-  default     = "East US"
+  default     = "Central US"
 }
 
 variable "cluster_name" {
@@ -25,11 +27,13 @@ variable "acr_name" {
 variable "node_count" {
   description = "Number of nodes in the default node pool"
   type        = number
-  default     = 2
+  default     = 1
 }
+
+
 
 variable "node_vm_size" {
   description = "VM size for the default node pool"
   type        = string
-  default     = "Standard_B2ms"
+  default     = "Standard_D2as_v4"
 }
