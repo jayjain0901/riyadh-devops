@@ -8,7 +8,7 @@ def hello():
     return '''
     <html>
         <body>
-            <h1>Samyaj, Jain!</h1>
+            <h1>Hello, Jay Jain!</h1>
             <p>This is a simple Flask application deployed on Kubernetes</p>
             <p>Version: 1.0.0</p>
             <p>Environment: Production</p>
