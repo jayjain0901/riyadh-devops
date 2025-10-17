@@ -25,6 +25,11 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      with:
+        args: >
+          -Dsonar.projectKey=hello-world-app
+          -Dsonar.projectName="Hello World App"
+          -Dsonar.sources=.        
 
     - name: 'Set up Docker Buildx'
       uses: docker/setup-buildx-action@v2
