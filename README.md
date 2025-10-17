@@ -94,7 +94,15 @@ Add these secrets to your GitHub repo for CI/CD:
 - Create alerts for pod CrashLoopBackOff statuses.
 - Email notifications can be set up via Azure Action Groups.
 
+## Monitoring with Prometheus and Grafana
 
+- Prometheus and Grafana are deployed in the `monitoring` namespace via Helm.
+- Access both using `kubectl port-forward` on local machine:
+  - Prometheus: `kubectl port-forward svc/prometheus-stack-kube-prom-prometheus -n monitoring 9090:9090`
+  - Grafana: `kubectl port-forward svc/prometheus-stack-grafana -n monitoring 3000:80`
+- Grafana connects to Prometheus using the internal cluster URL.
+
+This setup enables cluster metrics visualization without complex setup during development.
 
 ## Dockerfile Summary
 
