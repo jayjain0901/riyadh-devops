@@ -28,6 +28,18 @@ This repository contains a complete DevOps pipeline and infrastructure setup to 
 - GitHub repository.
 - Azure VM (ubuntu)
 
+## Git Ignore Configuration
+
+To ensure smooth uploads to GitHub and avoid committing large or sensitive files, a `.gitignore` file has been added to this project.
+
+The `.gitignore` excludes:
+- Terraform executable binaries (e.g., `terraform.exe`)
+- Local environment and configuration files
+- Temporary files and build artifacts
+- System-specific directories (e.g., `.vscode/`, `.idea/`)
+
+This setup ensures only relevant project code, manifests, and configuration scripts are version-controlled, keeping the repository clean and lightweight.
+
 
 
 ## Setup Steps
@@ -119,6 +131,8 @@ This setup enables cluster metrics visualization without complex setup during de
 - Free tier Azure subscriptions have low CPU/core limits scale deployments accordingly.
 - CI/CD credentials and secrets must be securely handled.
 - Monitor pod statuses; resolve Pending or CrashLoopBackOff before deploying more replicas.
+
+
 
 
 
