@@ -121,3 +121,7 @@ This setup enables cluster metrics visualization without complex setup during de
 - Monitor pod statuses; resolve Pending or CrashLoopBackOff before deploying more replicas.
 
 
+
+# Application can be accessed here http://172.168.99.182/
+
+
