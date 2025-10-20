@@ -32,15 +32,6 @@ Adding SonarQube to the CI/CD pipeline was a major improvement for code quality.
 ### 6. **Monitoring, Alerts, and Debugging**
 I discovered that AKS and Azure Monitor integrations rely on Log Analytics workspaces. When I first tried to set up pod alerting, I learned that workspaces are tightly bound to the cluster at creation time. The workaround taught me a lot about Azure’s logging model. I also set up CrashLoopBackOff alerts that email me directly, which would be vital in production.
 
-### 7. **Key Learnings**
-- Cloud provider quotas can impose real design limits; working within the free tier forces you to be efficient.
-- Pay attention to old ReplicaSets and pending pods. Cleaning these up is key for stability, especially with just one node.
-- A modular folder structure, even for small apps, saves time during iteration and debugging.
-- Automating quality, builds, tests, and deployment from day one creates a reliable development process.
-
-
-
-
 
 
 ## Project Structure
